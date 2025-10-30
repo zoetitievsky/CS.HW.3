@@ -1,8 +1,3 @@
-pip install islp
-
-(oct_hw) zoetitievsky@penguin:~$ python3
-Python 3.11.2 (main, Apr 28 2025, 14:11:48) [GCC 12.2.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
 >>> import numpy as np
 >>> import pandas as pd
 >>> from matplotlib.pyplot import subplots
@@ -99,11 +94,6 @@ dtype: float64
 0        1.0      5
 1        1.0     10
 2        1.0     15
->>> new_predictions = results.get_prediction(newX)
->>> paste
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'paste' is not defined
 >>> new_predictions = results.get_prediction(newX);
 >>> new_predictions.prediccted_mean
 Traceback (most recent call last):
@@ -156,36 +146,6 @@ NameError: name 'ser' is not defined. Did you mean: 'set'?
 >>> 'ser.iloc[pos]'
 'ser.iloc[pos]'
 >>> ax = subplots(figuresize=(8,8))[1]
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/home/zoetitievsky/oct_hw/lib/python3.11/site-packages/matplotlib/pyplot.py", line 1777, in subplots
-    fig = figure(**fig_kw)
-          ^^^^^^^^^^^^^^^^
-  File "/home/zoetitievsky/oct_hw/lib/python3.11/site-packages/matplotlib/pyplot.py", line 1042, in figure
-    manager = new_figure_manager(
-              ^^^^^^^^^^^^^^^^^^^
-  File "/home/zoetitievsky/oct_hw/lib/python3.11/site-packages/matplotlib/pyplot.py", line 552, in new_figure_manager
-    return _get_backend_mod().new_figure_manager(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zoetitievsky/oct_hw/lib/python3.11/site-packages/matplotlib/backend_bases.py", line 3503, in new_figure_manager
-    fig = fig_cls(*args, **kwargs)
-          ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zoetitievsky/oct_hw/lib/python3.11/site-packages/matplotlib/figure.py", line 2560, in __init__
-    super().__init__(**kwargs)
-  File "/home/zoetitievsky/oct_hw/lib/python3.11/site-packages/matplotlib/figure.py", line 154, in __init__
-    self.set(**kwargs)
-  File "/home/zoetitievsky/oct_hw/lib/python3.11/site-packages/matplotlib/artist.py", line 146, in <lambda>
-    cls.set = lambda self, **kwargs: Artist.set(self, **kwargs)
-                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zoetitievsky/oct_hw/lib/python3.11/site-packages/matplotlib/artist.py", line 1241, in set
-    return self._internal_update(cbook.normalize_kwargs(kwargs, self))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zoetitievsky/oct_hw/lib/python3.11/site-packages/matplotlib/artist.py", line 1233, in _internal_update
-    return self._update_props(
-           ^^^^^^^^^^^^^^^^^^^
-  File "/home/zoetitievsky/oct_hw/lib/python3.11/site-packages/matplotlib/artist.py", line 1206, in _update_props
-    raise AttributeError(
-AttributeError: Figure.set() got an unexpected keyword argument 'figuresize'
 >>> ax = subplots(figsize=(8,8))[1]
 >>> ax.scatter(results.fittedvalues, results.resid)
 <matplotlib.collections.PathCollection object at 0x7f9d99db8790>
